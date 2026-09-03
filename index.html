@@ -1,5 +1,87 @@
 ---
 layout: home
-title: Homer Simpson's Website
-subtitle: This is where I will tell the world about me
+title: Lionel Messi
+subtitle: The legend, the magician
 ---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="Lionel Messi — highlights, career, and moments">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <main class="hero">
+    <div class="hero-inner">
+      <h1 class="neon">Lionel Messi</h1>
+      <p class="tag">The magician of football — moments that defy logic.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#highlights">See highlights</a>
+        <a class="btn btn-ghost" href="#about">About Messi</a>
+      </div>
+
+      <div class="hero-footnote">New: curated highlights & interactive timeline</div>
+    </div>
+
+    <svg class="hero-ornament" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden>
+      <defs>
+        <linearGradient id="g" x1="0" x2="1">
+          <stop offset="0%" stop-color="#ff3cac" />
+          <stop offset="50%" stop-color="#784ba0" />
+          <stop offset="100%" stop-color="#2b86c5" />
+        </linearGradient>
+      </defs>
+      <path d="M0,300 C150,200 350,400 800,250 L800 400 L0 400 Z" fill="url(#g)" opacity="0.07"></path>
+    </svg>
+  </main>
+
+  <section id="highlights" class="section">
+    <div class="container">
+      <h2>Highlights</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Dribble masterclass</h3>
+          <p>Unforgettable solo runs and close-control miracles.</p>
+        </article>
+        <article class="card">
+          <h3>Free-kick genius</h3>
+          <p>Bend it, curl it, find the net — unforgettable set pieces.</p>
+        </article>
+        <article class="card">
+          <h3>Playmaker & finisher</h3>
+          <p>Assists and goals — the complete attacking package.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section dark">
+    <div class="container">
+      <h2>About Messi</h2>
+      <p class="lead">Lionel Andrés Messi — Argentine professional footballer, multiple Ballon d'Or winner and a player who changed generations.</p>
+
+      <div class="timeline">
+        <div class="timeline-item"><strong>Early years</strong><span>— Rosario to Barcelona youth</span></div>
+        <div class="timeline-item"><strong>Peak</strong><span>— Decades of magic with Barça</span></div>
+        <div class="timeline-item"><strong>International</strong><span>— Copa, World Cup moments</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with ❤️ for the beautiful game.</p>
+      <p class="muted">Made by {{ site.author | default: "guerau8" }}</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
