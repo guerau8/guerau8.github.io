@@ -11,10 +11,22 @@ subtitle: The legend, the magician
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ page.title }}</title>
   <meta name="description" content="Lionel Messi — highlights, career, and moments">
+  <meta name="theme-color" content="#0f0c17">
 
-  <!-- Google Fonts -->
+  <!-- Performance: preconnect to fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Critical styles (small) could be inlined here for faster first paint -->
   <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Open Graph (nice preview when sharing) -->
+  <meta property="og:title" content="Lionel Messi — The magician">
+  <meta property="og:description" content="Curated highlights and timeline of Lionel Messi's career">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://guerau8.github.io/">
+  <meta property="og:image" content="/assets/images/hero.svg">
 </head>
 <body>
   <main class="hero">
@@ -30,33 +42,41 @@ subtitle: The legend, the magician
       <div class="hero-footnote">New: curated highlights & interactive timeline</div>
     </div>
 
-    <svg class="hero-ornament" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden>
-      <defs>
-        <linearGradient id="g" x1="0" x2="1">
-          <stop offset="0%" stop-color="#ff3cac" />
-          <stop offset="50%" stop-color="#784ba0" />
-          <stop offset="100%" stop-color="#2b86c5" />
-        </linearGradient>
-      </defs>
-      <path d="M0,300 C150,200 350,400 800,250 L800 400 L0 400 Z" fill="url(#g)" opacity="0.07"></path>
-    </svg>
+    <!-- Lightweight decorative hero SVG (scales well and keeps repo small) -->
+    <img class="hero-decor" src="/assets/images/hero.svg" alt="gradient hero" aria-hidden />
   </main>
 
   <section id="highlights" class="section">
     <div class="container">
       <h2>Highlights</h2>
+      <p class="lead">Hand-picked clips and moments — click a thumbnail to load the highlight.</p>
+
       <div class="cards">
         <article class="card">
           <h3>Dribble masterclass</h3>
           <p>Unforgettable solo runs and close-control miracles.</p>
+          <div class="yt-thumb" data-video-id="dQw4w9WgXcQ" aria-label="Play dribble highlights" role="button" tabindex="0">
+            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Dribble highlight thumbnail">
+            <div class="play">▶</div>
+          </div>
         </article>
+
         <article class="card">
           <h3>Free-kick genius</h3>
           <p>Bend it, curl it, find the net — unforgettable set pieces.</p>
+          <div class="yt-thumb" data-video-id="oHg5SJYRHA0" aria-label="Play free-kick highlights" role="button" tabindex="0">
+            <img src="https://img.youtube.com/vi/oHg5SJYRHA0/hqdefault.jpg" alt="Free-kick thumbnail">
+            <div class="play">▶</div>
+          </div>
         </article>
+
         <article class="card">
           <h3>Playmaker & finisher</h3>
           <p>Assists and goals — the complete attacking package.</p>
+          <div class="yt-thumb" data-video-id="V-_O7nl0Ii0" aria-label="Play playmaker highlights" role="button" tabindex="0">
+            <img src="https://img.youtube.com/vi/V-_O7nl0Ii0/hqdefault.jpg" alt="Playmaker thumbnail">
+            <div class="play">▶</div>
+          </div>
         </article>
       </div>
     </div>
@@ -71,6 +91,18 @@ subtitle: The legend, the magician
         <div class="timeline-item"><strong>Early years</strong><span>— Rosario to Barcelona youth</span></div>
         <div class="timeline-item"><strong>Peak</strong><span>— Decades of magic with Barça</span></div>
         <div class="timeline-item"><strong>International</strong><span>— Copa, World Cup moments</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2>Gallery</h2>
+      <p class="lead">A compact gallery of iconic moments (click to view larger).</p>
+      <div class="cards">
+        <article class="card"><img src="/assets/images/hero.svg" alt="gallery placeholder" style="width:100%;height:auto;border-radius:8px"></article>
+        <article class="card"><img src="/assets/images/hero.svg" alt="gallery placeholder" style="width:100%;height:auto;border-radius:8px"></article>
+        <article class="card"><img src="/assets/images/hero.svg" alt="gallery placeholder" style="width:100%;height:auto;border-radius:8px"></article>
       </div>
     </div>
   </section>
